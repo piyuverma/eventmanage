@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Event</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-cookies.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.min.js"></script>
+    <script src="lib/jquery-1.12.1.min.js"></script>
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="app/lib/ui-bootstrap-tpls-2.3.1.js"></script>
+    <script src="js/controllers/EditEventController.js"></script>
+    <script src="js/filters.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<style>input.ng-invalid.ng-dirty {
+    background-color: orangered
+}
+
+input.ng-valid.ng-pristine {
+    background-color: greenyellow
+}</style>
+
+<div ng-controller="EditEventController" style="padding-left: 20px;padding-top: 20px">
+    <div class="container">
+            <span class="well-lg col-md-12" style="background-color: #2aabd2">
+               <a href="EventDetails.html" style="color: white">Home</a>
+            </span>
+
+            <span class="well-lg">
+            <h2>Enter Event Details:</h2>
+            </span>
+        <form name="newEventForm">
+            <fieldset>
+                <label for="eventName" style="padding-right: 20px">Name of the event:</label>
+                <input id="eventName" type="text" required class="input-lg"
+                       placeholder="Name of Event"
+                       ng-model="event.name" style="margin-left: 40px"><br>
+
+
+                <label for="eventDate" style="padding-right: 70px">Event Date:</label>
+                <input id="eventDate" type="text" class="input-lg" placeholder="Date of Event"
+                       ng-model="event.date" style="margin-left: 40px"><br>
+                <label for="eventTime" style="padding-right: 45px">Event Timings:</label>
+                <input id="eventTime" type="text" class="input-lg" placeholder="Time of Event"
+                       ng-model="event.time" style="margin-left: 40px"><br>
+                <label for="eventAddress" style="padding-right: 13px">Venue of the event:</label>
+                <input id="eventAddress" type="text" class="input-lg"
+                       placeholder="Address of Event"
+                       ng-model="event.location.address"
+                       style="margin-left: 40px"><br>
+                <label for="eventCity" style="padding-right: 115px">City:</label>
+                <input id="eventCity" type="text" class="input-lg" placeholder="City of Event"
+                       ng-model="event.location.city"
+                       style="margin-left: 40px"><br>
+                <label for="eventProvince" style="padding-right: 81px">Province:</label>
+                <input id="eventProvince" type="text" class="input-lg"
+                       placeholder="Province of Event"
+                       ng-model="event.location.province"
+                       style="margin-left: 40px"><br><br>
+
+                <button type="submit" ng-disabled="newEventForm.$invalid" class="btn  btn-lg btn-success"
+                        ng-click="saveEvent(event,newEventForm)"
+                        style="margin-left: 230px">
+                    Save
+                </button>
+                <button type="button" class="btn btn-lg btn-default" ng-click="cancel()">Cancel</button>
+            </fieldset>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

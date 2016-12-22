@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-cookies.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.min.js"></script>
+    <script src="lib/jquery-1.12.1.min.js"></script>
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/underscore.js"></script>
+    <script type="text/javascript" src="app/lib/ui-bootstrap-tpls-2.3.1.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/EditProfileController.js"></script>
+    <script src="js/filters.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">
+    <div ng-controller="EditProfileController" style="padding-left: 20px;padding-top: 20px">
+
+        <span class="well-lg col-md-12" style="background-color: #2aabd2">
+               <a href="EventDetails.html" style="color: white">Home</a>
+        </span>
+
+        <div class="row">
+            <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2">
+
+
+                <img ng-src="../app/img/ProfileIcon.png" alt="Profile Pic" style="padding-top: 80px">
+
+
+            </div>
+            <div class="col-md-7 col-lg-7 col-xs-7 col-sm-7">
+                 <span class="well-lg">
+                    <h2>Edit Profile:</h2>
+                 </span>
+                <form name="ProfileInfo">
+                    <fieldset>
+                        <label for="username" style="padding-right: 100px">UserName:</label>
+                        <input id="username" type="text" placeholder="User Name" ng-model="user.username"
+                               class="input-lg" style="padding-left: 40px;margin-bottom: 10px" required>
+                        <br>
+                        <label for="password" style="padding-right: 101px">Password:</label>
+                        <input id="password" type="password" placeholder="Password" ng-model="user.password"
+                               class="input-lg" style="padding-left: 40px;margin-bottom: 10px" required>
+                        <br>
+                        <label for="name" style="padding-right: 130px">Name:</label>
+                        <input id="name" type="text" placeholder="Name" ng-model="user.name" class="input-lg"
+                               style="padding-left: 40px;margin-bottom: 10px" required>
+                        <br>
+                        <label for="email" style="padding-right: 70px">Email Address:</label>
+                        <input id="email" type="text" placeholder="Email Address" ng-model="user.emailId"
+                               class="input-lg" style="padding-left: 40px;margin-bottom: 10px" required>
+                        <br>
+                        <label for="bio" style="padding-right: 145px">Bio:
+                        </label>
+                        <textarea id="bio" rows="3" cols="23"
+                                  ng-model-options=""
+                                  ng-model="user.bio"
+                                  class="input-lg"
+                                  style="padding-left: 40px;margin-bottom: 10px" required>
+                        </textarea>
+
+
+                    </fieldset>
+
+
+                </form>
+                <br>
+                <button class="btn btn-lg btn-info" ng-disabled="ProfileInfo.$invalid" style="margin-left: 280px">Save
+                </button>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

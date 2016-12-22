@@ -1,0 +1,34 @@
+{
+    "name": "Angular Boot Camp",
+    "date": "1/3/2016",
+    "time": "10:30 am",
+    "location": {
+      "address": "ABC Area",
+      "city": "XYZ City",
+      "province": "PQR Province"
+    },
+    "image": "img/angularJsLogo.png",
+    "sessions": [
+      {
+        "name": "Session1",
+        "creatorname": "A KUMAR",
+        "duration": 1,
+        "level": "Beginner",
+        "upVoteCount": 0
+      },
+      {
+        "name": "Session2",
+        "creatorname": "B SHARMA",
+        "duration": 2,
+        "level": "Intermediate",
+        "upVoteCount": 0
+      },
+      {
+        "name": "Session3",
+        "creatorname": "C DUBEY",
+        "duration": 4,
+        "level": "Advanced",
+        "upVoteCount": 0
+      }
+    ]
+  }
